@@ -12,6 +12,9 @@ if (isset($_GET['message'])){
     if ($_GET['message'] == "erreur4") {
         $mdp_different = "Les mot de passe doivent être identiques";
     };
+    if ($_GET['message'] == "erreur5") {
+        $enregistrement = "Une erreur est survenue pendant l'enregistrement";
+    };
     if ($_GET['message'] == "succes") {
         $succes = "Enregistrement effectué!";
     };
@@ -57,6 +60,9 @@ if (isset($_GET['message'])){
     <?php if (isset($manque)){
         echo "<div class = 'message echec'>" .$manque ."</div>";
         } ?>
+    <?php if (isset($enregistrement)){
+        echo "<div class = 'message echec'>" .$enregistrement ."</div>";
+    } ?>
     <?php if (isset($succes)){
         echo "<div class = 'message succes'>" .$succes ."</div>";
         } ?>
