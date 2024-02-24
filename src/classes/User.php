@@ -60,10 +60,6 @@ class User {
         return password_verify($mdp, $this->getMdp());
     }
     // Génération aléatoire d'un ID:
-    // private function aleaId(): int{
-    //     return random_int(0, 1000000);
-    // }
-    // Consigne sur l'ID:
     private function suivantId(): int {
         $Database = new Database();
         $utilisateurs = $Database->getAllUtilisateurs();
@@ -84,17 +80,6 @@ class User {
         return $i;
     }
 
-    //     $id = 1;
-    //     foreach (($Database->getAllUtilisateurs()) as $utilisateurs){
-    //         if ($utilisateurs->$ligne[4] === $id){
-    //             $id = $id + 1;
-    //         }else{
-    //             break;
-    //         }
-    //     }
-    //     return $id;
-    // }
-
     public function  getObjectToArray(): array {
         return [
             'nom' => $this -> getNom(),
@@ -104,6 +89,7 @@ class User {
             'id' => $this -> getId(),
         ];
     }
+
 }
 
 ?>

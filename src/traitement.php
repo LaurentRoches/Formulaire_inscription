@@ -1,5 +1,5 @@
 <?php
-require './config.php'; // autre otpion plus permissive = inclued;
+require './config.php'; // autre otpion plus permissive = include;
 require './classes/User.php';
 require './classes/Database.php';
 
